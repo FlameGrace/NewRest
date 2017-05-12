@@ -1,0 +1,16 @@
+//
+//  PrefixHeader.pch
+//  NewRest
+//
+//  Created by 李嘉军 on 2017/5/11.
+//  Copyright © 2017年 lli. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+#import "AppDelegate.h"
+#define MainStoryBoard ([NSStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]])
+#define ApplicationDelegate ((AppDelegate *)[[NSApplication sharedApplication]delegate])
+#define SkipNotificationName (@"SkipNotificationName")
+#define ConfirmNotificationName (@"ConfirmNotificationName")
+#endif /* PrefixHeader_pch */
