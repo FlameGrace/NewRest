@@ -29,7 +29,6 @@
 }
 
 
-
 - (void)viewWillAppear
 {
     [super viewWillAppear];
@@ -41,22 +40,19 @@
 
 - (IBAction)confirm:(id)sender {
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:ConfirmNotificationName object:nil];
+    [ApplicationDelegate.restTimer startTimer];
     [self showMainWindow];
 }
 
 - (IBAction)skip:(id)sender {
     
-    [[NSNotificationCenter defaultCenter]postNotificationName:SkipNotificationName object:nil];
+    [ApplicationDelegate.restTimer continueTimer];
     [self showMainWindow];
 }
 
 - (void)showMainWindow
 {
-    [[ApplicationDelegate.mainWindow window]center];
-    [[ApplicationDelegate.mainWindow window]orderFront:nil];
     [[ApplicationDelegate.nowWindow window]orderOut:nil];
-    
 }
 
 
@@ -90,18 +86,6 @@
     });
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

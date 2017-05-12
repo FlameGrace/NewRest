@@ -8,23 +8,59 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <RestTimerDelegate>
 
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
-    self.mainWindow = [MainStoryBoard instantiateControllerWithIdentifier:@"MainWindow"];
-    [[self.mainWindow window]center];
-    [[self.mainWindow window]orderFront:nil];
     
+    if(![[NSUserDefaults standardUserDefaults]objectForKey:@"restTime"])
+    {
+        [[NSUserDefaults standardUserDefaults]setObject:@"15*60" forKey:@"restTime"];
+    }
+    [self statusBar];
+    [self restTimer];
+
 }
 
 
-- (void)applicationWillTerminate:(NSNotification *)aNotification {
-    // Insert code here to tear down your application
+- (void)restTimer:(RestTimer *)timer handleTime:(NSTimeInterval)handleTime
+{
+    int timeFlag = (int)handleTime;
+    int m = (int)(timeFlag/60);
+    int s = (int)(timeFlag%60);
+    self.statusBar.item.title = [NSString stringWithFormat:@"%d:%02d",m,s];
+    
+}
+
+- (void)restTimerArriveRestTime:(RestTimer *)timer
+{
+    [[self.nowWindow window]orderFront:nil];
+    [[self.nowWindow window]center];
+}
+
+
+- (TimeStatusBar *)statusBar
+{
+    if(!_statusBar)
+    {
+        _statusBar = [[TimeStatusBar alloc]init];
+    
+    }
+    return _statusBar;
+}
+
+
+- (RestTimer *)restTimer
+{
+    if(!_restTimer)
+    {
+        NSString *restTimeString = [[NSUserDefaults standardUserDefaults]objectForKey:@"restTime"];
+        _restTimer = [[RestTimer alloc]initWithRestTime:restTimeString.doubleValue delegate:self];
+    }
+    return _restTimer;
 }
 
 - (NowWindowController *)nowWindow

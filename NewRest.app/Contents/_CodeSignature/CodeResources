@@ -8,34 +8,66 @@
 		<data>
 		NpSX3eGMie+wjghyuKfavsR9EyQ=
 		</data>
+		<key>Resources/Base.lproj/Localizable.strings</key>
+		<data>
+		Oykqtlk8q+fzWu+U/jwKvB8oFKQ=
+		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		C1Hr9ufT36WOXLmG6h7io4Av6a0=
+		IurBUedSmsAAFqWbDZWKewrtUPU=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/Khf-H8-JzL-view-zKa-gU-gNJ.nib</key>
 		<data>
-		E3iMVDVymhugxs6LGj7suQhkU+Q=
+		lhAw3rKZGtgLaafQWONYrZGOdhI=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
 		<data>
-		I2I4WNz/olGE95qy5OHoy2fp2Qk=
-		</data>
-		<key>Resources/Base.lproj/Main.storyboardc/MainWindow.nib</key>
-		<data>
-		k3HPx7KkeqVvywRWij2lBirr6/I=
+		zoeHZ7bND0+5WzW8mKvXB/VAp4Q=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/NowWindow.nib</key>
 		<data>
-		fbPcU0XtTU0Puxgn2QW31X6qYiA=
-		</data>
-		<key>Resources/Base.lproj/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
-		<data>
-		aMZEEPyTY1vpRPutd0IFoN0SZSw=
+		UCF9dfX6LaM5CrZqjtJC3gyDt9E=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/gg.nib</key>
 		<data>
-		DGFbKKHbmoc/uPMzizi+AYe7RDM=
+		OyFarOaExmuBtDziN6apNlnZOZo=
 		</data>
+		<key>Resources/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			Oykqtlk8q+fzWu+U/jwKvB8oFKQ=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/en.lproj/Main.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			sS0VDXDnDWPeLKr0G4YgNrR67d0=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/zh-Hans.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			6oq8k+TA6xWaiPSaoSbyodCQhxU=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/zh-Hans.lproj/Main.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			K588CjRksg8GP667TUz3tclYakc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -46,54 +78,83 @@
 			i4gh4WYVPQiOBGgRkqHLJMeGcU5zBDBHvhpT2keBbdw=
 			</data>
 		</dict>
+		<key>Resources/Base.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3Z+VnhVdFtpZkO7qdLWqkHixPzGD3NmdgwuQNS2mgTw=
+			</data>
+		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			MwNMew1basm5W3RnedBjzgv2w/GYWheLYIcAczwGpb8=
+			yUhyEoHAVOKQCwsAat79zV9VeG+cidRH8RMf/SucIhw=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/Khf-H8-JzL-view-zKa-gU-gNJ.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9iE38EIitdBVph9ZlRws64VUU92VSDs/sNnArMWft2c=
+			e5pWGWlJNKwCOOON7cXRwHStyVflTRwpBObvOjAOU9U=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			gKySBbPxQEaQnWuNebewu613ntsGjl8JMo4ZBfKGhHQ=
-			</data>
-		</dict>
-		<key>Resources/Base.lproj/Main.storyboardc/MainWindow.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			wceMcYjZD6BV6Mu+RbDP7+YvTSiuZEhEOQqVMGrm1Ic=
+			F7OK/qQWUzW1wQasLDI0huWMLHwxjdFAJrl7IN9FcXc=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/NowWindow.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vAJTcnAW3mXG4J2xw/s31hqN++AthQiyxh6W+EdBqA0=
-			</data>
-		</dict>
-		<key>Resources/Base.lproj/Main.storyboardc/XfG-lQ-9wD-view-m2S-Jp-Qdl.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			HjwhhGKch+QRGnHJWkyEK/+EVOOBVcGY8Ko2sk8YB+k=
+			Cz3CwVi8yW28+scgSFLnPtkry25s+AU3GH0bNAm7ePg=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/gg.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			vvc+OKG6Wm6ax5a7cNkJVf+c403mmov2Oj5U9zysgSw=
+			C0/NRdTYpJcpdRgmTbNrPf24nL7/1H495THwEOZEv0g=
 			</data>
+		</dict>
+		<key>Resources/en.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3Z+VnhVdFtpZkO7qdLWqkHixPzGD3NmdgwuQNS2mgTw=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/en.lproj/Main.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			86lGDUNZtYWeJIlJqhsVCobJr7LmmqbDdIprBjGr/dQ=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/zh-Hans.lproj/Localizable.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			VlL+igZ4NQtRJfJLVUsyCQjHxImOJQfXeWvIKduvgBY=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/zh-Hans.lproj/Main.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			8OM+BXjgYdTVf8WMWzI9DuoMcKTTRDOt9cMNuDeqY28=
+			</data>
+			<key>optional</key>
+			<true/>
 		</dict>
 	</dict>
 	<key>rules</key>

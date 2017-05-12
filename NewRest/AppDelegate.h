@@ -7,14 +7,17 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "MainWindowController.h"
 #import "NowWindowController.h"
+#import "TimeStatusBar.h"
+#import "RestTimer.h"
 
 
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
-@property (strong, nonatomic) MainWindowController *mainWindow;
+@property (strong ,nonatomic) TimeStatusBar *statusBar;
+
+@property (strong, nonatomic) RestTimer *restTimer;
 
 @property (strong, nonatomic) NowWindowController *nowWindow;
 
