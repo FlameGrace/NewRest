@@ -8,14 +8,15 @@
 
 #import "MainViewController.h"
 
-#define RestTime (10)
+#define RestTime (15*60)
 
 
 @interface MainViewController()
 
 @property (assign, nonatomic) BOOL isShowNowWindow;
 @property (strong, nonatomic) NSTimer *timer;
-@property (assign, nonatomic) NSInteger timeFlag;
+@property (assign, nonatomic) NSTimeInterval startTime;
+@property (assign, nonatomic) NSTimeInterval pauseTime;
 
 
 @end
@@ -51,13 +52,17 @@
 - (void)skip
 {
     self.isShowNowWindow = NO;
+    self.startTime += [[NSDate date]timeIntervalSince1970] - self.pauseTime;
+    self.pauseTime = 0;
 }
 
 
 - (void)startTimer
 {
     [self stopTimer];
-    self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(handleTimer) userInfo:nil repeats:YES];
+    self.startTime = [[NSDate date]timeIntervalSince1970];
+    self.timer = [NSTimer scheduledTimerWithTimeInterval:1/5 target:self selector:@selector(handleTimer) userInfo:nil repeats:YES];
+    
     [self.timer fire];
 }
 
@@ -67,18 +72,17 @@
     {
         return;
     }
-    if(self.timeFlag%RestTime == 0&&self.timeFlag!=0)
+    NSTimeInterval reduce = [[NSDate date]timeIntervalSince1970] - self.startTime;
+    if(reduce >= RestTime)
     {
+        self.pauseTime = [[NSDate date]timeIntervalSince1970];
         [ApplicationDelegate.mainWindow showNowWindow];
         self.isShowNowWindow = YES;
     }
-    int m = (int)(self.timeFlag/60);
-    int s = (int)(self.timeFlag%60);
+    int timeFlag = (int)reduce;
+    int m = (int)(timeFlag/60);
+    int s = (int)(timeFlag%60);
     self.timeLabel.stringValue = [NSString stringWithFormat:@"%d : %02d",m,s];
-    self.timeFlag ++;
-    
-    
-    
     
 }
 
@@ -87,7 +91,8 @@
 {
     [self.timer invalidate];
     self.timer = nil;
-    self.timeFlag = 0;
+    self.pauseTime = 0;
+    self.startTime = 0;
 }
 
 
