@@ -18,6 +18,8 @@
 		863B57661EC441A500308525 /* NewRestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 863B57651EC441A500308525 /* NewRestTests.m */; };
 		863B57711EC441A500308525 /* NewRestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 863B57701EC441A500308525 /* NewRestUITests.m */; };
 		86B46C021EC59B36007BE892 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86B46C041EC59B36007BE892 /* Localizable.strings */; };
+		86BE4CAF1ECC4F700025BBC9 /* ShellTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BE4CAE1ECC4F700025BBC9 /* ShellTool.m */; };
+		86BE4CB31ECEB93B0025BBC9 /* RightMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BE4CB21ECEB93B0025BBC9 /* RightMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		86B46C081EC59CAE007BE892 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		86B46C091EC59CBA007BE892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		86B46C0B1EC59E16007BE892 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		86BE4CAD1ECC4F700025BBC9 /* ShellTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShellTool.h; sourceTree = "<group>"; };
+		86BE4CAE1ECC4F700025BBC9 /* ShellTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShellTool.m; sourceTree = "<group>"; };
+		86BE4CB11ECEB93B0025BBC9 /* RightMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightMenu.h; sourceTree = "<group>"; };
+		86BE4CB21ECEB93B0025BBC9 /* RightMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,8 @@
 				862899FA1EC582DA003FD89B /* RestTimer.m */,
 				86074F391EC592A4005C3A18 /* TimeStatusBar.h */,
 				86074F3A1EC592A4005C3A18 /* TimeStatusBar.m */,
+				86BE4CAD1ECC4F700025BBC9 /* ShellTool.h */,
+				86BE4CAE1ECC4F700025BBC9 /* ShellTool.m */,
 			);
 			name = RestTime;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 		863B574D1EC441A500308525 /* NewRest */ = {
 			isa = PBXGroup;
 			children = (
+				86BE4CB01ECEB90A0025BBC9 /* RightMenu */,
 				862899E71EC44BF3003FD89B /* RestTime */,
 				863B574E1EC441A500308525 /* AppDelegate.h */,
 				863B574F1EC441A500308525 /* AppDelegate.m */,
@@ -167,6 +176,15 @@
 				863B57721EC441A500308525 /* Info.plist */,
 			);
 			path = NewRestUITests;
+			sourceTree = "<group>";
+		};
+		86BE4CB01ECEB90A0025BBC9 /* RightMenu */ = {
+			isa = PBXGroup;
+			children = (
+				86BE4CB11ECEB93B0025BBC9 /* RightMenu.h */,
+				86BE4CB21ECEB93B0025BBC9 /* RightMenu.m */,
+			);
+			name = RightMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +325,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				862899F11EC45386003FD89B /* NowViewController.m in Sources */,
+				86BE4CB31ECEB93B0025BBC9 /* RightMenu.m in Sources */,
+				86BE4CAF1ECC4F700025BBC9 /* ShellTool.m in Sources */,
 				862899ED1EC44D32003FD89B /* NowWindowController.m in Sources */,
 				863B57531EC441A500308525 /* main.m in Sources */,
 				862899FB1EC582DA003FD89B /* RestTimer.m in Sources */,

@@ -10,4 +10,8 @@
 
 @interface RightMenu : NSView
 
+@property (strong ,nonatomic) NSButton *saveButton;
+@property (strong ,nonatomic) NSButton *skipeButton;
+@property (strong ,nonatomic) NSButton *confirmButton;
+
 @end

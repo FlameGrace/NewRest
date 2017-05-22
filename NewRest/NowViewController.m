@@ -7,6 +7,8 @@
 //
 
 #import "NowViewController.h"
+#import "ShellTool.h"
+#import "RightMenu.h"
 
 
 //local path fot save the picture
@@ -19,6 +21,7 @@
 
 @property (weak) IBOutlet NSImageView *imageView;
 @property (assign, nonatomic) BOOL isRequestRandomImage;
+@property (strong, nonatomic) RightMenu *rightMenu;
 
 @end
 
@@ -36,18 +39,88 @@
     self.view.layer.backgroundColor = [NSColor whiteColor].CGColor;
     self.imageView.image = [self randomImage];
     [self updateRandomImage];
+    self.rightMenu = [[RightMenu alloc]initWithFrame:CGRectZero];
+    [self.rightMenu.confirmButton setTarget:self];
+    [self.rightMenu.confirmButton setAction:@selector(confirm:)];
+    [self.rightMenu.skipeButton setTarget:self];
+    [self.rightMenu.skipeButton setAction:@selector(skip:)];
+    [self.rightMenu.saveButton setTarget:self];
+    [self.rightMenu.saveButton setAction:@selector(save:)];
+    self.rightMenu.hidden = YES;
+    self.rightMenu.layer.shadowColor = [NSColor blackColor].CGColor;
+    self.rightMenu.layer.shadowRadius = 5;
+    [self.view addSubview:self.rightMenu];
 }
 
-- (IBAction)confirm:(id)sender {
+
+- (void)mouseDown:(NSEvent *)event
+{
+    [self mouseDownForEvent:event];
+}
+
+-(void)rightMouseDown:(NSEvent *)theEvent
+{
+    [self mouseDownForEvent:theEvent];
+}
+
+- (void)mouseDownForEvent:(NSEvent *)event
+{
+    BOOL hidden = NO;
+    CGPoint location = event.locationInWindow;
+    if(self.rightMenu.frame.origin.x == location.x && self.rightMenu.frame.origin.y == location.y)
+    {
+        hidden = !self.rightMenu.hidden;
+    }
+    else
+    {
+        hidden = NO;
+    }
+    CGRect frame = CGRectMake(location.x, location.y, 100, 90);
+    self.rightMenu.frame = frame;
+    self.rightMenu.hidden = hidden;
+}
+
+- (void)confirm:(id)sender {
     
+    self.rightMenu.hidden = YES;
     [ApplicationDelegate.restTimer startTimer];
     [self showMainWindow];
+    
 }
 
-- (IBAction)skip:(id)sender {
+- (void)skip:(id)sender {
     
+    self.rightMenu.hidden = YES;
     [ApplicationDelegate.restTimer continueTimer];
     [self showMainWindow];
+}
+
+- (void)save:(id)sender {
+    
+    self.rightMenu.hidden = YES;
+    NSData *imageData = [self.imageView.image TIFFRepresentation];
+    NSBitmapImageRep *imageRep = [NSBitmapImageRep imageRepWithData:imageData];
+    [imageRep setSize:[[self.imageView image] size]];
+    // png
+    NSData * imageData1 = [imageRep representationUsingType:NSPNGFileType properties:nil];
+    NSTimeInterval time = [[NSDate date]timeIntervalSince1970];
+    
+    NSSavePanel*panel = [NSSavePanel savePanel];
+    panel.directoryURL = [NSURL URLWithString:@"~/Desktop"];
+    [panel setNameFieldStringValue:[NSString stringWithFormat:@"%.0f",time]];
+    [panel setMessage:NSLocalizedString(@"Choose", nil)];
+    [panel setAllowsOtherFileTypes:NO];
+    [panel setAllowedFileTypes:@[@"png"]];
+    [panel setExtensionHidden:YES];
+    [panel setCanCreateDirectories:YES];
+    [panel beginSheetModalForWindow:ApplicationDelegate.nowWindow.window completionHandler:^(NSInteger result){
+        if (result == NSFileHandlingPanelOKButton)
+        {
+            NSString *path = [[panel URL] path];
+            [imageData1 writeToFile:path atomically:YES];
+        }
+    }];
+    
 }
 
 - (void)showMainWindow
@@ -79,6 +152,7 @@
         if(data&&data.length>0)
         {
             [data writeToFile:RandomImageLocalPath atomically:YES];
+            //[self updateDesktopBackgroundImage];
         }
         self.isRequestRandomImage = NO;
         NSLog(@"下载完成");
@@ -87,6 +161,16 @@
     
 }
 
+
+//如果设置桌面背景图片路径为"cd ~/Desktop;cd ../桌面.jpeg;",则会自动更换桌面
+- (void)updateDesktopBackgroundImage
+{
+    NSString *cmd = @"cd ~/Desktop;";
+    cmd = [cmd stringByAppendingString:@"cd ../;"];
+    cmd = [cmd stringByAppendingString:[NSString stringWithFormat:@"cp %@ 桌面.jpeg;",RandomImageLocalPath]];
+    cmd = [cmd stringByAppendingString:@"killall Dock;"];
+    [ShellTool executeCmd:cmd];
+}
 
 
 @end

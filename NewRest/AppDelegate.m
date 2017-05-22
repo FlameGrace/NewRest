@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ShellTool.h"
 
 @interface AppDelegate () <RestTimerDelegate>
 
@@ -32,7 +33,6 @@
     int m = (int)(timeFlag/60);
     int s = (int)(timeFlag%60);
     self.statusBar.item.title = [NSString stringWithFormat:@"%d:%02d",m,s];
-    
 }
 
 - (void)restTimerArriveRestTime:(RestTimer *)timer

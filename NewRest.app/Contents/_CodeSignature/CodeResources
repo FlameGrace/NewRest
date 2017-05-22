@@ -10,15 +10,15 @@
 		</data>
 		<key>Resources/Base.lproj/Localizable.strings</key>
 		<data>
-		Oykqtlk8q+fzWu+U/jwKvB8oFKQ=
+		aPr1bIr0n3itxxfUy0WucecMelo=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<data>
-		IurBUedSmsAAFqWbDZWKewrtUPU=
+		mRpXngvgW9KqWHsuMj3wBpS4gpE=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/Khf-H8-JzL-view-zKa-gU-gNJ.nib</key>
 		<data>
-		lhAw3rKZGtgLaafQWONYrZGOdhI=
+		srw1zDLyl2i1ICAjR1h7zk0LjNQ=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
 		<data>
@@ -26,17 +26,17 @@
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/NowWindow.nib</key>
 		<data>
-		UCF9dfX6LaM5CrZqjtJC3gyDt9E=
+		7hFvU21xdaR9MBllX8Ovr+/5f10=
 		</data>
 		<key>Resources/Base.lproj/Main.storyboardc/gg.nib</key>
 		<data>
-		OyFarOaExmuBtDziN6apNlnZOZo=
+		58fYCLRqHW2kki071SwteSIrdGs=
 		</data>
 		<key>Resources/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			Oykqtlk8q+fzWu+U/jwKvB8oFKQ=
+			aPr1bIr0n3itxxfUy0WucecMelo=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -54,7 +54,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6oq8k+TA6xWaiPSaoSbyodCQhxU=
+			MPAUwQkfiwPiOXNKFHe9i/Yuiow=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -82,21 +82,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			3Z+VnhVdFtpZkO7qdLWqkHixPzGD3NmdgwuQNS2mgTw=
+			AfuuxcQVivOajaq6oAwOKQVhwkAlfLNtx6mjW3Hbyak=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yUhyEoHAVOKQCwsAat79zV9VeG+cidRH8RMf/SucIhw=
+			A1t9Q3FzUEnjfqP8fzFZwo71v9CB39wtb8A5EN7sj2c=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/Khf-H8-JzL-view-zKa-gU-gNJ.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			e5pWGWlJNKwCOOON7cXRwHStyVflTRwpBObvOjAOU9U=
+			n+cMRnoY0tKlLysETbuFlVDicpSlrN5sLHiZM9YszZo=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/MainMenu.nib</key>
@@ -110,21 +110,21 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			Cz3CwVi8yW28+scgSFLnPtkry25s+AU3GH0bNAm7ePg=
+			h+5MjSPDMOfKfbXVqaWFjj2r6NxFtIQ9AS5BZNwk4rc=
 			</data>
 		</dict>
 		<key>Resources/Base.lproj/Main.storyboardc/gg.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			C0/NRdTYpJcpdRgmTbNrPf24nL7/1H495THwEOZEv0g=
+			+7YjmAj3wVHn+x6uZOSNUdUnrdPgm3R46Tvn6hU3/1o=
 			</data>
 		</dict>
 		<key>Resources/en.lproj/Localizable.strings</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3Z+VnhVdFtpZkO7qdLWqkHixPzGD3NmdgwuQNS2mgTw=
+			AfuuxcQVivOajaq6oAwOKQVhwkAlfLNtx6mjW3Hbyak=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -142,7 +142,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VlL+igZ4NQtRJfJLVUsyCQjHxImOJQfXeWvIKduvgBY=
+			r1yUcArGoWPwzZfHadUkej1JUGugns9Au4e/A38ts8I=
 			</data>
 			<key>optional</key>
 			<true/>

@@ -10,4 +10,6 @@
 
 @interface ShellTool : NSObject
 
++ (NSString *)executeCmd:(NSString *)cmd;
+
 @end
