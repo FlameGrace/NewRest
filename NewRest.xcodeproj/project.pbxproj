@@ -250,7 +250,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = lli;
+				ORGANIZATIONNAME = flamegrace@hotmail.com;
 				TargetAttributes = {
 					863B574A1EC441A500308525 = {
 						CreatedOnToolsVersion = 8.3.1;
