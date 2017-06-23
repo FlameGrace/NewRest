@@ -2,8 +2,8 @@
 //  NewRestTests.m
 //  NewRestTests
 //
-//  Created by 李嘉军 on 2017/5/11.
-//  Copyright © 2017年 lli. All rights reserved.
+//  Created by Flame Grace on 2017/5/11.
+//  Copyright © 2017年 flamegrace@hotmail.com. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>

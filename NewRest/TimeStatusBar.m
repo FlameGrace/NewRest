@@ -2,8 +2,8 @@
 //  TimeStatusItem.m
 //  NewRest
 //
-//  Created by 李嘉军 on 2017/5/12.
-//  Copyright © 2017年 lli. All rights reserved.
+//  Created by Flame Grace on 2017/5/12.
+//  Copyright © 2017年 flamegrace@hotmail.com. All rights reserved.
 //
 
 #import "TimeStatusBar.h"
@@ -68,7 +68,7 @@
 -(void)pause:(id)sender
 {
     [ApplicationDelegate.restTimer pauseTimer];
-    [self.item.menu removeAllItems];
+    [self.item.menu removeAflamegrace@hotmail.comtems];
     [self insertContinue];
     [self insertEdit];
     [self insertQuit];
@@ -77,7 +77,7 @@
 -(void)continueT:(id)sender
 {
     [ApplicationDelegate.restTimer continueTimer];
-    [self.item.menu removeAllItems];
+    [self.item.menu removeAflamegrace@hotmail.comtems];
     [self insertPause];
     [self insertEdit];
     [self insertQuit];
@@ -96,7 +96,7 @@
     ApplicationDelegate.restTimer.restTime = object.restTime;
     [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:@"%f",object.restTime] forKey:@"restTime"];
     
-    [self.item.menu removeAllItems];
+    [self.item.menu removeAflamegrace@hotmail.comtems];
     [self insertPause];
     [self insertEdit];
     [self insertQuit];
