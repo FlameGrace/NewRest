@@ -34,7 +34,6 @@
 @interface TimeStatusBar()
 
 @property (strong,nonatomic) NSMutableArray *edits;
-
 @property (strong,nonatomic) NSMenu *editSubMenu;
 
 @end
@@ -55,9 +54,12 @@
         [self insertPause];
         [self insertEdit];
         [self insertQuit];
+        
     }
     return self;
 }
+
+
 
 
 -(void)quit:(id)sender
@@ -68,7 +70,7 @@
 -(void)pause:(id)sender
 {
     [ApplicationDelegate.restTimer pauseTimer];
-    [self.item.menu removeAflamegrace@hotmail.comtems];
+    [self.item.menu removeAllItems];
     [self insertContinue];
     [self insertEdit];
     [self insertQuit];
@@ -77,7 +79,7 @@
 -(void)continueT:(id)sender
 {
     [ApplicationDelegate.restTimer continueTimer];
-    [self.item.menu removeAflamegrace@hotmail.comtems];
+    [self.item.menu removeAllItems];
     [self insertPause];
     [self insertEdit];
     [self insertQuit];
@@ -88,6 +90,9 @@
     
 }
 
+
+
+
 -(void)editRestTime:(id)sender
 {
     NSMenuItem *item = (NSMenuItem*)sender;
@@ -96,12 +101,14 @@
     ApplicationDelegate.restTimer.restTime = object.restTime;
     [[NSUserDefaults standardUserDefaults]setObject:[NSString stringWithFormat:@"%f",object.restTime] forKey:@"restTime"];
     
-    [self.item.menu removeAflamegrace@hotmail.comtems];
+    [self.item.menu removeAllItems];
     [self insertPause];
     [self insertEdit];
     [self insertQuit];
-    
+
 }
+
+
 
 - (void)insertPause
 {

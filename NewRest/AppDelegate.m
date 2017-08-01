@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "ShellTool.h"
 
+
+
 @interface AppDelegate () <RestTimerDelegate>
 
 @end
@@ -23,7 +25,6 @@
     }
     [self statusBar];
     [self restTimer];
-
 }
 
 
@@ -71,6 +72,7 @@
     }
     return _nowWindow;
 }
+
 
 
 @end

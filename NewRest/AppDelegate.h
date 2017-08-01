@@ -12,10 +12,10 @@
 #import "RestTimer.h"
 
 
-
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (strong ,nonatomic) TimeStatusBar *statusBar;
+
 
 @property (strong, nonatomic) RestTimer *restTimer;
 
